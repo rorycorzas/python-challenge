@@ -70,3 +70,15 @@ print(f"\n")
 print("Greatest Increase in Profits:", max_inc_month, "${:,.2f}".format(max_inc_value))
 print(f"\n")
 print("Greatest Decrease in Profits:", min_inc_month, "|", "${:,.2f}".format(min_inc_value))
+
+
+output_path = os.path.join("../outputs", "PyBank_output")
+with open(output_path, "w") as txtfile:
+    txtfile.write(f"Financial Analysis\n") 
+    txtfile.write(f"---------------------------------------------------")
+    txtfile.write(f"\nTotal Months: {months}") 
+    txtfile.write(f"\nTotal: ${neto}") 
+    txtfile.write(f"\nAverage Change: ${avr_change}")
+    txtfile.write(f"\n")
+    txtfile.write(f"Greatest Increase in Profits: {max_inc_month} (${max_inc_value})\n")
+    txtfile.write(f"Greatest Decrease in Profits: {min_inc_month} (${min_inc_value})\n")
