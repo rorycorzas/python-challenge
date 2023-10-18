@@ -61,6 +61,7 @@ for i in range(months-1):
         delta_pl.append(pl[i+1]-pl[i])
 avr_change=round(mean(delta_pl),2)
 
+# Muestra en terminal los resultados
 print(f"\nFinancial Analysis") 
 print(f"---------------------------------------------------")
 print(f"\nTotal Months: {months}") 
@@ -71,7 +72,7 @@ print("Greatest Increase in Profits:", max_inc_month, "${:,.2f}".format(max_inc_
 print(f"\n")
 print("Greatest Decrease in Profits:", min_inc_month, "|", "${:,.2f}".format(min_inc_value))
 
-
+# Guarda en el archivo "PyBank_output" los resultados, en el folder "outputs" 
 output_path = os.path.join("../outputs", "PyBank_output")
 with open(output_path, "w") as txtfile:
     txtfile.write(f"Financial Analysis\n") 
